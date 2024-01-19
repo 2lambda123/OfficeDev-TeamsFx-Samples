@@ -43,7 +43,14 @@ export class GithubIssues extends BaseWidget<any, IIssueState> {
 
   override async getData(): Promise<IIssueState> {
     try {
-      return { issues: await getIssues() };
+      try {
+        return { issues: await getIssues() };
+      } catch (err) {
+        console.error(err);
+        return { issues: [] };
+      } finally {
+        this.setState({ inputFocused: false, loading: false });
+      }
     } catch (err) {
       console.error(err);
       return { issues: [] };
