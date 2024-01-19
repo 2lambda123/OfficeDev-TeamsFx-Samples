@@ -38,7 +38,7 @@ Developer Assist Dashboard shows you how to build a tab with Azure DevOps work i
 
 > Here are the instructions to run the sample in **Visual Studio Code**. You can also try to run the app using TeamsFx CLI tool, refer to [Try the Sample with TeamsFx CLI](cli.md)
 
-### Run the app locally
+### Run the app using GitHub Actions
 
 1. Clone the repo to your local workspace or directly download the source code.
 1. Open the project in Visual Studio Code.
@@ -48,7 +48,7 @@ Developer Assist Dashboard shows you how to build a tab with Azure DevOps work i
 > The first time you run this sample, you need to login to consent some delegated permissions. If you don't see the consent page, please check if your browser blocks the pop-up window.
 > ![pop-up block](images/popup-block.png)
 
-### Deploy the app to Azure
+### Add GitHub Actions Workflow
 
 Deploy your project to Azure by following these steps:
 
@@ -115,6 +115,6 @@ This widget displays Planner tasks including the title of the task. This widget 
 | Mar 14, 2023 | Ayca, Huihui, Hui, Frank, Ellie | onboard                                |
 | Mar 31, 2023 | Hui                             | update to support Teams Toolkit V5.0.0 |
 
-## Feedback
+## Troubleshooting for GitHub Actions Workflow
 
 We really appreciate your feedback! If you encounter any issue or error, please report issues to us following the [Supporting Guide](https://github.com/OfficeDev/TeamsFx-Samples/blob/dev/SUPPORT.md). Meanwhile you can make [recording](https://aka.ms/teamsfx-record) of your journey with our product, they really make the product better. Thank you!
