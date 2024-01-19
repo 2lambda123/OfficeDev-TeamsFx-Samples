@@ -79,7 +79,7 @@ export default async function run(
   let oboCredential: OnBehalfOfUserCredential;
   try {
     oboCredential = new OnBehalfOfUserCredential(accessToken, oboAuthConfig);
-  logError(e.message);
+  Logger.error(e.message);
   logError(e.message);
   } catch (e) {
     context.log.error(e);
