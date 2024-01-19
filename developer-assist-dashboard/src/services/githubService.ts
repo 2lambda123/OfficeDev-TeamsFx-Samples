@@ -8,15 +8,10 @@ import { callFunction } from "./callFunction";
  */
 export async function getIssues(): Promise<githubIssuesModel[]> {
   try {
-    try {
-      const respData = await callFunction("GET", "callService", { serviceType: "github" });
-      return respData["issues"];
-    } catch (e) {
-      throw new Error("Failed to retrieve GitHub issues.");
-    }
+    const respData = await callFunction("GET", "callService", { serviceType: "github" });
     return respData["issues"];
   } catch (e) {
-    throw e;
+    throw new Error("Failed to retrieve GitHub issues.");
   }
 }
 
