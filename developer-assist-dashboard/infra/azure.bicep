@@ -83,7 +83,7 @@ resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
       }
       appSettings: [
         {
-          name: ' AzureWebJobsDashboard'
+          name: 'AzureWebJobsDashboard'
           value: 'DefaultEndpointsProtocol=https;AccountName=${functionStorage.name};AccountKey=${listKeys(functionStorage.id, functionStorage.apiVersion).keys[0].value};EndpointSuffix=${environment().suffixes.storage}' // Azure Functions internal setting
         }
         {
@@ -175,7 +175,7 @@ resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
           value: plannerBucketId
         }
         {
-          name: 'WEBSITE_AUTH_AAD_ACL'
+          name: 'WEBSITE_AUTH_ALLOWED_TOKEN_AUDIENCES'
           value: '{"allowed_client_applications": [${allowedClientApplications}]}'
         }
       ]
