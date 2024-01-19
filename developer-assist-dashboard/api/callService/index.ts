@@ -146,7 +146,9 @@ async function handleRequest(
       return { tasks: await getPlanner(oboCredential) };
     }
     // If serviceType is "planner" and method is "POST"
-    case "planner:POST": {
+    case "planner:POST":
+      console.log(reqData); // Add this line to log the reqData object
+      {
       // Call createPlannerTask function to create a task
       await createPlannerTask(oboCredential, reqData);
       return { tasks: await getPlanner(oboCredential) };
