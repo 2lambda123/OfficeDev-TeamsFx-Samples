@@ -13,7 +13,7 @@ extensions:
 ---
 # Getting Started with Todo List
 
-Todo List provides an easy way to manage to-do items in Teams Client. This app helps enabling task collaboration and management for your team. The frontend is a React app and the backend is hosted on Azure. You will need an Azure subscription to run the app.
+Todo List provides an easy way to manage to-do items in Teams Client. This app helps enabling task collaboration and management for your team. The frontend is a React app and the backend is hosted on Azure. You will need an Azure subscription to run the app. You can view [Overview to authentication for tabs using SSO in Teams with Azure AD](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview) to understand how authentication works in this sample.
 
 ![Todo Item List](assets/sampleDemo.gif)
 
