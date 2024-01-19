@@ -1,3 +1,16 @@
+---
+page_type: sample
+languages:
+- typescript
+products:
+- office-teams
+- office
+name: Graph Connector Bot
+urlFragment: officedev-teamsfx-samples-bot-graph-connector-bot
+description: This sample app showcases how to build a Teams command bot that queries custom data ingested into Microsoft Graph using Graph connector.
+extensions:
+  createdDate: "2023-11-07"
+---
 # Getting Started with Graph Connector Bot
 
 This sample app showcases how to build a Teams command bot that queries custom data ingested into Microsoft Graph using Graph connector.
@@ -20,7 +33,7 @@ This sample app showcases how to build a Teams command bot that queries custom d
 ### Run the app locally
 1. Clone the repo to your local workspace or directly download the source code.
 1. Open the project in Visual Studio Code.
-1. Open Debug View (`Ctrl+Shift+D`) and select "Debug (Edge)" or "Debug (Chrome)" in dropdown list.
+1. Open Debug View (`Ctrl+Shift+D`) and select "Debug in Teams (Edge)" or "Debug in Teams (Chrome)" in dropdown list.
 1. Press "F5" to open a browser window and then select your package to view sample app.
 1. Find the Teams package in `build\appPackage\appPackage.local.zip`.
 1. Navigate to [Teams Admin Center](https://admin.teams.microsoft.com/policies/manage-apps), and upload the Teams package.
@@ -33,8 +46,7 @@ This sample app showcases how to build a Teams command bot that queries custom d
 
 ### Preview the app in Teams
 1. Once deployment is completed, you can preview the APP running in Azure. In Visual Studio Code, open `Run and Debug` and select `Launch Remote (Edge)` or `Launch Remote (Chrome)` in the dropdown list and Press `F5` or green arrow button to open a browser.
-1. Use Teams Toolkit to [submit the Teams app to the Teams Admin Center](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish#publish-to-your-organization).
-1. [Approve the Teams app for publishing to your organization's app store](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish#admin-approval-for-teams-apps).
+1. Use Teams Toolkit to [publish your Teams app to your organization](https://docs.microsoft.com/en-us/microsoftteams/platform/toolkit/publish#publish-to-your-organization).
 
 #### Usage of this sample
 1. Navigate to 'Graph Connector' section of the Teams app in [Teams Admin Center](https://admin.teams.microsoft.com/policies/manage-apps), and click 'Grant permissions'.

@@ -1,5 +1,8 @@
-# yaml-language-server: $schema=https://aka.ms/teams-toolkit/1.0.0/yaml.schema.json
-version: 1.0.0
+# yaml-language-server: $schema=https://aka.ms/teams-toolkit/v1.2/yaml.schema.json
+version: v1.2
+
+additionalMetadata:
+  sampleTag: TeamsFx-Samples:npm-search-connector-M365
 
 environmentFolderPath: ./env
 
@@ -18,7 +21,7 @@ provision:
   - uses: botAadApp/create
     with:
       # The Azure Active Directory application's display name
-      name: npmSearchConnector-${{TEAMSFX_ENV}}
+      name: npmSearchConnector${{APP_NAME_SUFFIX}}
     writeToEnvironmentFile:
       # The Azure Active Directory application's client id created for bot.
       botId: BOT_ID

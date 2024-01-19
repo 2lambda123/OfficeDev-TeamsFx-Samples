@@ -1,6 +1,19 @@
+---
+page_type: sample
+languages:
+- typescript
+products:
+- office-teams
+- office
+name: Incoming Webhook Notification
+urlFragment: officedev-teamsfx-samples-bot-incoming-webhook-notification
+description: This is a sample which shows how to send notification via Incoming Webhook in Microsoft Teams channels.
+extensions:
+  createdDate: "2022-03-31"
+---
 # Getting Started with Incoming Webhook Notification
 An Incoming Webhook Sample provides an easy way to send adaptive cards in Microsoft Teams channels. The webhooks are used as tools to track and notify.
-![Incoming Webhook Overall](./images/incoming-webhook.gif)
+![Incoming Webhook Overall](./assets/sampleDemo.gif)
 
 ## This sample illustrates
 - How to create an Incoming Webhook in Teams.

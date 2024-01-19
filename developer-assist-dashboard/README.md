@@ -1,3 +1,16 @@
+---
+page_type: sample
+languages:
+- typescript
+products:
+- office-teams
+- office
+name: Developer Assist Dashboard
+urlFragment: officedev-teamsfx-samples-tab-developer-assist-dashboard
+description: A dashboard that integrates with Azure DevOps, Github issues and Planner tasks that accelerates developer productivity.
+extensions:
+  createdDate: "2023-03-08"
+---
 # Getting Started with Developer Assist Dashboard
 
 Microsoft Teams supports the ability to run web-based UI inside "custom tabs" that users can install either for just themselves (personal tabs) or within a team or group chat context.
@@ -88,12 +101,10 @@ This widget displays Planner tasks including the title of the task. This widget 
 ![planner-widget](images/planner-task.png)
 
 **To integrate Planner tasks in the dashboard, follow the instructions:**
-
-1. Visit [Microsoft Graph Explorer](https://aka.ms/ge), select profile icon on the right side and login with your Microsoft 365 developer account.
-   1. Type `https://graph.microsoft.com/v1.0/planner/plans` in Graph Explorer query box and select **Run query**. Copy the id of the plan you wish to use.
-   1. Type `https://graph.microsoft.com/v1.0/planner/plans/{Plan-Id}/buckets` in Graph Explorer query box and replace {Plan-Id} with your **plan-id** and select **Run query**. Copy the id of the bucket you'd like to see in your dashboard.
-1. Open `./env/.env.local.user` and `./env/.env.dev.user` files in Developer Assist Dashboard project:
-   - Add the value of **PlANNER_GROUP_ID** with your plan id.
+1. Open [Microsoft Planner](https://tasks.office.com/) in your browser, sign in, and open a plan of your choice. The group id and plan id are both found in the URL. For example, if your URL looks like this: `https://tasks.office.com/YOUR-TENANT-THERE/en-US/Home/Planner/#/plantaskboard?groupId=12345678-1234-1234-1234-123456789012&planId=87654321-4321-4321-4321-210987654321`. Then your group id is **12345678-1234-1234-1234-123456789012** and your plan id is **87654321-4321-4321-4321-210987654321**.
+2. Visit [Microsoft Graph Explorer](https://aka.ms/ge), select profile icon on the right side and login with your Microsoft 365 developer account. Type `https://graph.microsoft.com/v1.0/planner/plans/{Plan-Id}/buckets` in Graph Explorer query box and replace {Plan-Id} with your **plan-id** and select **Run query**. Copy the id of the bucket you'd like to see in your dashboard.
+3. Open `./env/.env.local.user` and `./env/.env.dev.user` files in Developer Assist Dashboard project:
+   - Add the value of **PlANNER_GROUP_ID** with your group id.
    - Add the value of **PLANNER_PLAN_ID** with your plan id.
    - Add the value of **PLANNER_BUCKET_ID** with your bucket id.
 

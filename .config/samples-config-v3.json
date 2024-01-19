@@ -1,33 +1,77 @@
 {
-    "baseUrl": "https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/",
-    "defaultPackageLink": "https://github.com/OfficeDev/TeamsFx-Samples/archive/refs/tags/v2.1.0.zip",
-    "baseFolderName": "TeamsFx-Samples-2.1.0",
+    "filterOptions": {
+        "capabilities": [
+            "Tab",
+            "Bot",
+            "Message Extension",
+            "Meeting"
+        ],
+        "languages": [
+            "TS",
+            "JS",
+            "Python"
+        ],
+        "technologies": [
+            "Azure",
+            "Adaptive Cards",
+            "SSO",
+            "SPFx",
+            "Outlook",
+            "Graph"
+        ]
+    },
     "samples": [
         {
             "id": "hello-world-tab-with-backend",
+            "onboardDate": "2021-11-30",
             "title": "Tab App with Azure Backend",
+            "shortId": "helloworld-backend",
             "shortDescription": "A Hello World app of Microsoft Teams Tab app which has a backend service",
-            "fullDescription": "This is a Hello World app of Microsoft Teams Tab app which accomplishes very simple function like single-sign on. You can run this app locally or deploy it to Microsoft Azure. This app has a Tab frontend and a backend service using Azure Function.",
-            "tags": ["Tab", "TS", "Azure function"],
+            "fullDescription": "This is a Hello World app of Microsoft Teams Tab app which accomplishes very simple function like single-sign on. You can run this app locally or deploy it to Microsoft Azure. This app has a Tab frontend and a backend service using Azure Functions.",
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "TS",
+                "Azure Functions"
+            ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": true
         },
         {
             "id": "graph-toolkit-contact-exporter",
+            "shortId": "contact-exporter",
+            "onboardDate": "2021-11-30",
             "title": "Contact Exporter using Graph Toolkit",
             "shortDescription": "Contact Exporter app of Microsoft Teams Tab app.",
             "fullDescription": "Contact Exporter app can export your teams contact info to Excel files, and it is using Microsoft Graph Toolkit as UI component. This app only has a Tab frontend.",
-            "tags": ["Tab", "JS"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "JS"
+            ],
             "time": "5min to run",
             "configuration": "Ready for debug",
-            "suggested": true
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
+            "suggested": false
         },
         {
             "id": "bot-sso",
+            "shortId": "sso-bot",
+            "onboardDate": "2021-10-19",
             "title": "Bot App with SSO Enabled",
             "shortDescription": "A Hello World app of Microsoft Teams Bot app with SSO",
             "fullDescription": "This is an extended Hello World app of Microsoft Teams Bot app demonstrating how to integrate with Bot Framework SDK, TeamsFx SDK, and Graph SDK to implement SSO (Single Sign-On) feature that retrieves profile photos for currently signed-in users.",
+            "types": [
+                "Bot"
+            ],
             "tags": [
                 "Bot",
                 "TS",
@@ -36,13 +80,20 @@
             ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "todo-list-SPFx",
+            "shortId": "todo-spfx",
+            "onboardDate": "2021-05-06",
             "title": "Todo List with SPFx",
             "shortDescription": "Todo List app hosting on SharePoint",
             "fullDescription": "Todo List with SPFx is a Todo List for individuals to manage his/her personal to-do items. This app is hosted on Sharepoint. There is no requirements to deploy Azure resources.",
+            "types": [
+                "Tab"
+            ],
             "tags": [
                 "SharePoint",
                 "SPFx",
@@ -50,196 +101,391 @@
             ],
             "time": "1hr to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "hello-world-in-meeting",
+            "shortId": "helloworld-meeting",
+            "onboardDate": "2022-04-08",
             "title": "My First Meeting App",
             "shortDescription": "A template for apps using only in the context of a Teams meeting",
             "fullDescription": "My first meeting app is a simple template to show how to build a tab app that can be installed and used in a meeting, in all of meeting lifecycles: pre-meeting chat, in-meeting, post-meeting chat. This sample contains tab as side panel, meeting chat tab, or meeting details tab. The template also includes simple codes to fetch meeting info and user profile.",
-            "tags": ["Meeting extension", "JS"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Meeting Extension",
+                "JS"
+            ],
             "time": "30min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "images/thumbnail.png",
+            "gifPath": "images/thumbnail.png",
             "suggested": false
         },
         {
             "id": "todo-list-with-Azure-backend-M365",
+            "shortId": "todo-backend-m365",
+            "onboardDate": "2021-11-09",
             "title": "Todo List (Works in Teams, Outlook and Office)",
             "shortDescription": "Todo List app that runs across Microsoft 365 including Teams, Outlook and Office",
             "fullDescription": "Todo List app helps to manage personal to do items and also runs across Microsoft 365, including Teams, Outlook and Office. The frontend is a React app and the backend is an Azure Function. You can optionally deploy and host the app in Azure.",
-            "tags": ["React", "Azure function", "JS", "Outlook", "Office"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "React",
+                "Azure Functions",
+                "JS",
+                "Outlook",
+                "Office"
+            ],
             "time": "30min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "NPM-search-connector-M365",
+            "shortId": "npm-search-m365",
+            "onboardDate": "2021-11-09",
             "title": "NPM Search Connector",
             "shortDescription": "Search and Share an NPM Package in Teams and Outlook (Web)",
             "fullDescription": "NPM Search Connector is a Message Extension that runs across Microsoft 365 including Teams and Outlook (Web). It allows you to perform a quick search for a NPM package and insert package details into conversations for easy sharing. The front end is built with Adaptive Cards and the backend is an Azure Bot Service.",
-            "tags": ["Message extension", "JS", "Outlook"],
+            "types": [
+                "Message Extension"
+            ],
+            "tags": [
+                "Message Extension",
+                "JS",
+                "Outlook"
+            ],
             "time": "45min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "bot-proactive-messaging-teamsfx",
+            "shortId": "proactive-messaging",
+            "onboardDate": "2022-08-01",
             "title": "Proactive Messaging",
             "shortDescription": "Demonstrates how to send proactive messages to users.",
             "fullDescription": "This is a sample which shows how to save user's conversation reference information to send proactive reminder message using Bots.",
+            "types": [
+                "Bot"
+            ],
             "tags": [
                 "Bot",
                 "JS"
             ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "images/thumbnail.png",
+            "gifPath": "images/send-proactive-messages.gif",
             "suggested": false,
-            "url": "https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx",
-            "packageLink": "https://github.com/OfficeDev/Microsoft-Teams-Samples/archive/refs/heads/main.zip",
-            "relativePath": "Microsoft-Teams-Samples-main/samples/bot-proactive-messaging-teamsfx"
+            "downloadUrlInfo": {
+                "owner": "OfficeDev",
+                "repository": "Microsoft-Teams-Samples",
+                "ref": "main",
+                "dir": "samples/bot-proactive-messaging-teamsfx"
+            }
         },
         {
             "id": "adaptive-card-notification",
+            "shortId": "ac-notification",
+            "onboardDate": "2022-03-28",
             "title": "Adaptive Card Notification",
             "shortDescription": "Demonstrates how to send adaptive card notification to users.",
             "fullDescription": "This is a sample which shows how to send notification with different adaptive cards using Bots.",
+            "types": [
+                "Bot"
+            ],
             "tags": [
-                "Bot" , "TS"
+                "Bot",
+                "TS"
             ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "incoming-webhook-notification",
+            "shortId": "webhook-notification",
+            "onboardDate": "2022-03-31",
             "title": "Incoming Webhook Notification",
             "shortDescription": "Demonstrates how to send notification via Incoming Webhook.",
             "fullDescription": "This is a sample which shows how to send notification via Incoming Webhook in Microsoft Teams channels.",
+            "types": [
+                "Bot"
+            ],
             "tags": [
-                "Bot" , "TS"
+                "Bot",
+                "TS"
             ],
             "time": "5min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "stocks-update-notification-bot",
+            "shortId": "stocks-notification",
+            "onboardDate": "2022-08-08",
             "title": "Stocks Update",
             "shortDescription": "Keep up to date with the latest stock price in Microsoft Teams.",
             "fullDescription": "This sample demonstrates how a Notification Bot can be used to call an external API using API Key authentication, on a pre-defined schedule of every 30 seconds, to obtain the latest stock information and render the results as an Adaptive Card.",
-            "tags": ["Bot", "TS", "Azure function", "API Key"],
+            "types": [
+                "Bot"
+            ],
+            "tags": [
+                "Bot",
+                "TS",
+                "Azure Functions",
+                "API Key"
+            ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "query-org-user-with-message-extension-sso",
+            "shortId": "query-user-sso",
+            "onboardDate": "2022-09-20",
             "title": "Org User Search Connector",
             "shortDescription": "Query Org User with Message Extension SSO",
-            "fullDescription": "This is a simple search-based message extension app demonstrating how to integrate with Bot Framework SDK, TeamsFx SDK and Microsoft Graph API to implement a feature that queries organization's user with single sign on (SSO) capability.",
-            "tags": ["Message extension", "SSO"],
+            "fullDescription": "This is a simple search-based Message Extension app demonstrating how to integrate with Bot Framework SDK, TeamsFx SDK and Microsoft Graph API to implement a feature that queries organization's user with single sign on (SSO) capability.",
+            "types": [
+                "Message Extension"
+            ],
+            "tags": [
+                "Message Extension",
+                "SSO"
+            ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "team-central-dashboard",
+            "shortId": "central-dashboard",
+            "onboardDate": "2022-09-20",
             "title": "Team Central Dashboard",
             "shortDescription": "A single dashboard displaying data chats and content from Microsoft Graph to accelerate team collaboration and personal productivity.",
             "fullDescription": "A single dashboard displaying data chats and content from Microsoft Graph to accelerate team collaboration and personal productivity.",
-            "tags": ["Tab", "TS", "Azure function", "SSO"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "TS",
+                "Azure Functions",
+                "SSO"
+            ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "graph-connector-app",
+            "shortId": "graph-connector",
+            "onboardDate": "2022-04-18",
             "title": "Graph Connector App",
             "shortDescription": "Showcases how to build custom Graph Connector",
             "fullDescription": "This sample app showcases how to build custom Graph Connector with Azure Functions and query data using Microsoft Graph Client and TeamsFx SDK.",
-            "tags": ["Tab", "Azure function", "TS", "SSO"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "Azure Functions",
+                "TS",
+                "SSO"
+            ],
             "time": "10min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "graph-toolkit-one-productivity-hub",
+            "shortId": "graph-ttk-hub",
+            "onboardDate": "2022-07-27",
             "title": "One Productivity Hub using Graph Toolkit",
             "shortDescription": "Microsoft Teams tab with SSO to view calendar events, to-do tasks and file folders.",
             "fullDescription": "One Productivity Hub sample shows you how to build a tab for viewing your calendar events, to-do tasks and files by using Microsoft Graph Toolkit components and TeamsFx provider. You can run this app locally or deploy it to Microsoft Azure.",
-            "tags": ["Tab", "JS", "SSO"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "JS",
+                "SSO",
+                "Graph Toolkit"
+            ],
             "time": "5min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "todo-list-with-Azure-backend",
+            "shortId": "todo-backend",
+            "onboardDate": "2021-05-06",
             "title": "Todo List with backend on Azure",
-            "shortDescription": "Todo List app with Azure Function backend and Azure SQL database",
+            "shortDescription": "Todo List app with Azure Functions backend and Azure SQL database",
             "fullDescription": "Todo List provides an easy way to manage to-do items in Teams Client. This app helps enabling task collaboration and management for your team. The frontend is a React app and the backend is hosted on Azure. You will need an Azure subscription to run the app.",
-            "tags": ["React", "Azure function", "Azure SQL", "JS", "CI/CD"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "React",
+                "Azure Functions",
+                "Azure SQL",
+                "JS",
+                "CI/CD"
+            ],
             "time": "30min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "share-now",
+            "shortId": "share-now",
+            "onboardDate": "2021-05-17",
             "title": "Share Now",
-            "shortDescription": "Knowledge sharing app contains a Tab and a Message extension",
+            "shortDescription": "Knowledge sharing app contains a Tab and a Message Extension",
             "fullDescription": "Share Now promotes the exchange of information between colleagues by enabling users to share content within the Teams environment. Users engage the app to share items of interest, discover new shared content, set preferences, and bookmark favorites for later reading.",
-            "tags": ["Tab", "Message extension", "TS"],
+            "types": [
+                "Tab",
+                "Message Extension"
+            ],
+            "tags": [
+                "Tab",
+                "Message Extension",
+                "TS"
+            ],
             "time": "30min to run",
             "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
-          "id": "hello-world-teams-tab-and-outlook-add-in",
-          "title": "Hello World Teams Tab and Outlook add-in",
-          "shortDescription": "A hello world project that contains both Teams Tab and Outlook add-in capability",
-          "fullDescription": "A hello world project that contains both Teams Tab and Outlook add-in capability",
-          "tags": ["Tab", "Outlook add-in"],
-          "time": "5min to run",
-          "configuration": "Ready for debug",
-          "suggested": false
+            "id": "hello-world-teams-tab-and-outlook-add-in",
+            "shortId": "helloworld-outlook",
+            "onboardDate": "2023-03-02",
+            "title": "Hello World Teams Tab and Outlook add-in",
+            "shortDescription": "A hello world project that contains both Teams Tab and Outlook add-in capability",
+            "fullDescription": "A hello world project that contains both Teams Tab and Outlook add-in capability",
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "Outlook Add-in"
+            ],
+            "time": "5min to run",
+            "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/thumbnail.png",
+            "suggested": false
         },
         {
-          "id": "outlook-add-in-set-signature",
-          "title": "Set signature using Outlook add-in",
-          "shortDescription": "An Outlook add-in that sets signature for the user",
-          "fullDescription": "An Outlook add-in that sets signature for the user",
-          "tags": ["Outlook add-in"],
-          "time": "5min to run",
-          "configuration": "Ready for debug",
-          "suggested": false,
-          "url": "https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/outlook-set-signature",
-          "packageLink": "https://github.com/OfficeDev/Office-Add-in-samples/archive/refs/heads/main.zip",
-          "relativePath": "Office-Add-in-samples-main/Samples/outlook-set-signature"
+            "id": "outlook-add-in-set-signature",
+            "shortId": "signature-outlook",
+            "onboardDate": "2023-05-04",
+            "title": "Set signature using Outlook add-in",
+            "shortDescription": "An Outlook add-in that sets signature for the user",
+            "fullDescription": "An Outlook add-in that sets signature for the user",
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Outlook Add-in"
+            ],
+            "time": "5min to run",
+            "configuration": "Ready for debug",
+            "thumbnailPath": "assets/outlook-set-signature-overview.png",
+            "gifPath": "assets/outlook-set-signature-overview.png",
+            "suggested": false,
+            "downloadUrlInfo": {
+                "owner": "OfficeDev",
+                "repository": "Office-Add-in-samples",
+                "ref": "main",
+                "dir": "Samples/outlook-set-signature"
+            }
         },
         {
             "id": "developer-assist-dashboard",
+            "shortId": "dev-assist-dashboard",
+            "onboardDate": "2023-03-07",
             "title": "Developer Assist Dashboard",
             "shortDescription": "A dashboard that integrates with Azure DevOps, Github issues and Planner tasks that accelerates developer productivity.",
             "fullDescription": "A dashboard that integrates with Azure DevOps, Github issues and Planner tasks that accelerates developer productivity.",
-            "tags": ["Outlook", "Office", "TS"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Outlook",
+                "Office",
+                "TS"
+            ],
             "time": "15min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "images/preview.png",
+            "gifPath": "images/preview.png",
             "suggested": false
         },
         {
             "id": "live-share-dice-roller",
+            "shortId": "dice-roller",
+            "onboardDate": "2023-04-27",
             "title": "Dice Roller in meeting",
             "shortDescription": "This sample introduces Microsoft Live Share and Azure Fluid Relay to enable a shared experience between multiple users.",
             "fullDescription": "Microsoft Live Share is a collaboration tool that enables you to share your experience with others in real time. Azure Fluid Relay is a part of this service. The diceroller example is a simple app that allows multiple users to roll a dice and see the results. This sample is a great way to get started with Live Share and Fluid.",
-            "tags": ["Live Share", "JS", "ReactJS", "Teams-JS 2.0"],
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Live Share",
+                "JS",
+                "ReactJS",
+                "Teams-JS 2.0"
+            ],
             "time": "5 min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
             "suggested": false
         },
         {
             "id": "teams-chef-bot",
+            "shortId": "chef-bot",
+            "onboardDate": "2023-06-25",
             "title": "Teams Chef Bot",
             "shortDescription": "Demonstrates how to build bot with Microsoft Teams AI Library.",
             "fullDescription": "This is a conversational bot for Microsoft Teams that impersonates a Chef to help you you cook Teams apps.",
+            "types": [
+                "Bot"
+            ],
             "tags": [
                 "Bot",
                 "TS",
@@ -247,7 +493,253 @@
             ],
             "time": "5min to run",
             "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
+            "suggested": true
+        },
+        {
+            "id": "spfx-productivity-dashboard",
+            "shortId": "spfx-dashboard",
+            "onboardDate": "2023-08-09",
+            "title": "One Productivity Hub using Graph Toolkit with SPFx",
+            "shortDescription": "Microsoft Teams tab powered by SharePoint Framework to view calendar events, to-do tasks and file folders.",
+            "fullDescription": "One Productivity Hub sample shows you how to build a tab for viewing your calendar events, to-do tasks and files by using Microsoft Graph Toolkit components and SharePoint provider. You can run this app locally or deploy it to SharePoint.",
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "TS",
+                "SPFx",
+                "Graph Toolkit"
+            ],
+            "time": "5min to run",
+            "configuration": "Ready for debug",
+            "thumbnailPath": "src/assets/screenshot.png",
+            "gifPath": "src/assets/screenshot.png",
             "suggested": false
+        },
+        {
+            "id": "react-retail-dashboard",
+            "shortId": "retail-dashboard",
+            "onboardDate": "2023-09-15",
+            "title": "Contoso Retail Dashboard",
+            "shortDescription": "Microsoft Teams tab powered by SharePoint Framework to show a Contoso retail dashboard based on demo sample data.",
+            "fullDescription": "Contoso Retail Dashboard sample shows you how to build a dashboard for viewing different control layouts. It also shows you how to create a Microsoft Teams personal app with SharePoint Framework, hosting the solution also in Outlook.com and in the Microsoft 365 Portal as a Microsoft 365 app.",
+            "types": [
+                "Tab"
+            ],
+            "tags": [
+                "Tab",
+                "TS",
+                "SPFx"
+            ],
+            "time": "5min to run",
+            "configuration": "Ready for debug",
+            "thumbnailPath": "assets/screenshot.png",
+            "gifPath": "assets/screenshot.png",
+            "suggested": false
+        },
+        {
+            "id": "sso-enabled-tab-via-apim-proxy",
+            "shortId": "tab-apim",
+            "onboardDate": "2023-09-15",
+            "title": "SSO Enabled Tab via APIM Proxy",
+            "shortDescription": "An SSO-enabled Microsoft Teams Tab app using APIM as a proxy.",
+            "fullDescription": "This is a Microsoft Teams tab app that can display user login information with SSO. This app uses Graph Toolkit as the frontend and Azure API Management as a proxy.",
+            "types": [
+              "Tab"
+            ],
+            "tags": [
+              "Tab",
+              "JS",
+              "API Management",
+              "SSO"
+            ],
+            "time": "5min to run",
+            "configuration": "Ready for debug",
+            "gifPath": "assets/sampleDemo.gif",
+            "thumbnailPath": "assets/thumbnail.png",
+            "suggested": false
+        },
+        {
+            "id": "large-scale-notification",
+            "shortId": "large-notification",
+            "onboardDate": "2023-10-17",
+            "title": "Large Scale Notification Bot",
+            "shortDescription": "This sample demonstrates the architecture of a Teams notification bot app created by Teams Toolkit to send individual chat messages to a large number of users in a tenant.",
+            "fullDescription": "This sample demonstrates the architecture of a Teams notification bot app created by Teams Toolkit to send individual chat messages to a large number of users in a tenant. This app relies on Azure services such as Azure Durable Functions and Service Bus Queue to handle high volume and speed of notification messaging.",
+            "types": [
+              "Bot"
+            ],
+            "tags": [
+              "Bot",
+              "TS",
+              "Azure Durable Functions",
+              "Notification",
+              "Large User Scale"
+            ],
+            "time": "30min to run",
+            "configuration": "Manual configurations required",
+            "gifPath": "assets/thumbnail.png",
+            "thumbnailPath": "assets/thumbnail.png",
+            "suggested": true
+        },
+        {
+            "id": "graph-connector-bot",
+            "shortId": "graph-connector-bot",
+            "onboardDate": "2023-11-07",
+            "title": "Graph Connector Bot",
+            "shortDescription": "This sample app showcases how to build a Teams command bot that queries custom data ingested into Microsoft Graph using Graph connector.",
+            "fullDescription": "This sample app showcases how to build a Teams command bot that queries custom data ingested into Microsoft Graph using Graph connector.",
+            "types": [
+              "Bot"
+            ],
+            "tags": [
+              "Bot",
+              "TS",
+              "Microsoft Graph Connectors"
+            ],
+            "time": "30min to run",
+            "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
+            "suggested": false
+        },
+        {
+            "id": "bot-conversation-python",
+            "shortId": "bot-conversation-py",
+            "onboardDate": "2023-11-08",
+            "title": "Teams Conversation Bot using Python",
+            "shortDescription": "This sample shows how to incorporate basic conversational flow into a Teams application.",
+            "fullDescription": "This bot has been created using Bot Framework. This sample shows how to incorporate basic conversational flow into a Teams application. It also illustrates a few of the Teams specific calls you can make from your bot.",
+            "types": [
+              "Bot"
+            ],
+            "tags": [
+              "Python",
+              "Bot",
+              "Bot Framework"
+            ],
+            "time": "5min to run",
+            "configuration": "Manual configurations required",
+            "thumbnailPath": "Images/2.WelcomeCard.PNG",
+            "gifPath": "Images/BotConversation.gif",
+            "suggested": false,
+            "downloadUrlInfo": {
+                "owner": "OfficeDev",
+                "repository": "Microsoft-Teams-Samples",
+                "ref": "main",
+                "dir": "samples/bot-conversation/python"
+            }
+        },
+        {
+            "id": "msgext-search-python",
+            "shortId": "msgext-search-py",
+            "onboardDate": "2023-11-08",
+            "title": "Teams Messaging Extensions Search using Python",
+            "shortDescription": "This sample illustrates how to build a Search-based Messaging Extension.",
+            "fullDescription": "There are two basic types of Messaging Extension in Teams: Search-based and Action-based. This sample illustrates how to build a Search-based Messaging Extension.",
+            "types": [
+              "Bot"
+            ],
+            "tags": [
+              "Python",
+              "Message extension",
+              "Bot Framework"
+            ],
+            "time": "5min to run",
+            "configuration": "Manual configurations required",
+            "thumbnailPath": "Images/9-mention-Search-Result.png",
+            "gifPath": "Images/msgext-search.gif",
+            "suggested": false,
+            "downloadUrlInfo": {
+                "owner": "OfficeDev",
+                "repository": "Microsoft-Teams-Samples",
+                "ref": "main",
+                "dir": "samples/msgext-search/python"
+            }
+        },
+        {
+            "id": "gc-nodejs-typescript-food-catalog",
+            "shortId": "gc-food-catalog",
+            "onboardDate": "2023-11-15",
+            "title": "Ingest Custom API Data into Microsoft 365 with a Microsoft Graph Connector",
+            "shortDescription": "This sample project uses Teams Toolkit for Visual Studio Code to simplify the process of creating a Microsoft Graph connector that ingests data from a custom API to Microsoft Graph.",
+            "fullDescription": "This sample project uses Teams Toolkit for Visual Studio Code to simplify the process of creating a Microsoft Graph connector that ingests data from a custom API to Microsoft Graph. It provides an end to end example of creating the connector, ingesting content and refreshing the ingested content on a schedule. It also includes the simplified admin experience which means that admins can toggle the connector on and off from the Microsoft Teams admin center.",
+            "types": [
+              "Tab"
+            ],
+            "tags": [
+              "TS",
+              "Microsoft Graph Connectors",
+              "Azure Functions"
+            ],
+            "time": "5min to run",
+            "configuration": "Manual configurations required",
+            "thumbnailPath": "assets/ttk_thumb.png",
+            "gifPath": "assets/ttk.gif",
+            "suggested": false,
+            "downloadUrlInfo": {
+                "owner": "pnp",
+                "repository": "graph-connectors-samples",
+                "ref": "main",
+                "dir": "samples/nodejs-typescript-food-catalog"
+            }
+        },
+        {
+            "id": "reddit-link-unfurling",
+            "shortId": "reddit-link-unfurling",
+            "onboardDate": "2023-12-12",
+            "title": "Format Reddit Link into Adaptive Card",
+            "shortDescription": "This sample application showcases how to build a Teams application (Link Unfurling, a type of Message Extension) that can format the Reddit link into an Adaptive Card when a user pastes a Reddit link into the compose message area.",
+            "fullDescription": "This sample application showcases how to build a Teams application (Link Unfurling, a type of Message Extension) that can format the Reddit link into an Adaptive Card when a user pastes a Reddit link into the compose message area.",
+            "types": [
+              "Message Extension"
+            ],
+            "tags": [
+              "Message Extension",
+              "JS",
+              "Link Unfurling"
+            ],
+            "time": "10 mins to run",
+            "configuration": "Manual configurations required",
+            "thumbnailPath": "doc/image/link.png",
+            "gifPath": "doc/image/link.png",
+            "suggested": false,
+            "downloadUrlInfo": {
+                "owner": "OfficeDev",
+                "repository": "Microsoft-Teams-Samples",
+                "ref": "main",
+                "dir": "samples/msgext-link-unfurling-reddit/nodejs"
+            }
+        },
+        {
+            "id": "meetings-live-code-interview",
+            "shortId": "live-code-interview",
+            "onboardDate": "2023-12-18",
+            "title": "Live Coding Interview",
+            "shortDescription": "This sample demos live coding in a teams meeting stage using live share SDK. The tab is loaded as side panel which contains various coding questions.",
+            "fullDescription": "This sample demos live coding in a teams meeting stage using live share SDK. The tab is loaded as side panel which contains various coding questions.",
+            "types": [
+              "Meeting"
+            ],
+            "tags": [
+              "Meeting Extension",
+              "JS",
+              "Live Share SDK"
+            ],
+            "time": "5 mins to run",
+            "configuration": "Ready for debug",
+            "thumbnailPath": "assets/thumbnail.png",
+            "gifPath": "assets/sampleDemo.gif",
+            "suggested": false,
+            "downloadUrlInfo": {
+                "owner": "OfficeDev",
+                "repository": "Microsoft-Teams-Samples",
+                "ref": "main",
+                "dir": "samples/meetings-live-code-interview/nodejs"
+            }
         }
     ]
 }

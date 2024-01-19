@@ -11,11 +11,11 @@
         "termsOfUseUrl": "https://www.example.com/termsofuse"
     },
     "icons": {
-        "color": "resources/color.png",
-        "outline": "resources/outline.png"
+        "color": "color.png",
+        "outline": "outline.png"
     },
     "name": {
-        "short": "npmSearchConnector",
+        "short": "npmSearchConnector${{APP_NAME_SUFFIX}}",
         "full": "full name for npmSearchConnector"
     },
     "description": {

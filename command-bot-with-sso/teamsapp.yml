@@ -1,5 +1,8 @@
-# yaml-language-server: $schema=https://aka.ms/teams-toolkit/1.0.0/yaml.schema.json
-version: 1.0.0
+# yaml-language-server: $schema=https://aka.ms/teams-toolkit/v1.2/yaml.schema.json
+version: v1.2
+
+additionalMetadata:
+  sampleTag: TeamsFx-Samples:command-bot-with-sso
 
 environmentFolderPath: ./env
 
@@ -20,7 +23,7 @@ provision:
   - uses: teamsApp/create
     with:
       # Teams app name
-      name: sso-command-bot-${{TEAMSFX_ENV}}
+      name: sso-command-bot${{APP_NAME_SUFFIX}}
     # Write the information of created resources into environment file for
     # the specified environment variable(s).
     writeToEnvironmentFile:
@@ -30,7 +33,7 @@ provision:
   - uses: botAadApp/create
     with:
       # The Azure Active Directory application's display name
-      name: sso-command-bot-${{TEAMSFX_ENV}}
+      name: sso-command-bot${{APP_NAME_SUFFIX}}
     writeToEnvironmentFile:
       # The Azure Active Directory application's client id created for bot.
       botId: BOT_ID

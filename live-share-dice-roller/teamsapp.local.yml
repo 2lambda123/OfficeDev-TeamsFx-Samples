@@ -1,12 +1,15 @@
-# yaml-language-server: $schema=https://developer.microsoft.com/json-schemas/teams-toolkit/teamsapp-yaml/1.0.0/yaml.schema.json
-version: 1.0.0
+# yaml-language-server: $schema=https://aka.ms/teams-toolkit/v1.2/yaml.schema.json
+version: v1.2
+
+additionalMetadata:
+  sampleTag: TeamsFx-Samples:live-share-dice-roller
 
 environmentFolderPath: ./env
 
 provision:
   - uses: teamsApp/create # Creates a Teams app
     with:
-      name: live-share-dice-roller-${{TEAMSFX_ENV}} # Teams app name
+      name: live-share-dice-roller${{APP_NAME_SUFFIX}} # Teams app name
     # Output: following environment variable will be persisted in current environment's .env file.
     # TEAMS_APP_ID: the id of Teams app
     writeToEnvironmentFile: # Write the information of created resources into environment file for the specified environment variable(s).

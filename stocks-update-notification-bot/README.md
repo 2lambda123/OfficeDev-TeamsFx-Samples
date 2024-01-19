@@ -1,10 +1,23 @@
+---
+page_type: sample
+languages:
+- typescript
+products:
+- office-teams
+- office
+name: Stocks Update
+urlFragment: officedev-teamsfx-samples-bot-stocks-update-notification-bot
+description: Keep up to date with the latest stock price in Microsoft Teams.
+extensions:
+  createdDate: "2022-08-08"
+---
 # Getting Started with Stocks Update Notification Bot
 
 Bots can be used to deliver pro-active messages into different Microsoft Teams contexts, such as a personal bot chat, one to one or group chat, or a channel conversation.
 
 The Stocks Update Notification bot shows you how to request data on a pretermined schedule from a public API using API Key authentication and render that data using an Adaptive Card in different Microsoft Teams contexts.
 
-![Stocks Update Notification Bot](images/app.gif)
+![Stocks Update Notification Bot](assets/sampleDemo.gif)
 
 ## This sample illustrates
 - How to launch and debug an app using "F5" using Teams Toolkit for Visual Studio.

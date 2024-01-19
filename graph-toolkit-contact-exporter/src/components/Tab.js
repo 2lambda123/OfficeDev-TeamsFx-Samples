@@ -1,39 +1,39 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import React from "react";
 import "./App.css";
 import "./Tab.css";
+
 import {
   Button,
   Table,
-  TableHeader,
-  TableRow,
   TableBody,
-  TableHeaderCell,
   TableCell,
   TableCellLayout,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
 } from "@fluentui/react-components";
-
+import { CacheService } from "@microsoft/mgt";
 import { Providers, ProviderState } from "@microsoft/mgt-element";
 import {
   PeoplePicker,
   Person,
-  PersonViewType,
   PersonCardInteraction,
+  PersonViewType,
 } from "@microsoft/mgt-react";
+import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
+import { TeamsUserCredential } from "@microsoft/teamsfx";
+import React from "react";
 import { CSVLink } from "react-csv";
 
-import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
-import { CacheService } from "@microsoft/mgt";
 import config from "./lib/config";
-
-import { TeamsUserCredential } from "@microsoft/teamsfx";
 
 class Tab extends React.Component {
   constructor(props) {
     super(props);
-    CacheService.clearCaches();
+    const cacheId = Providers.getCacheId();
+    CacheService.clearCacheById(cacheId);
 
     this.state = {
       showLoginPage: undefined,
@@ -61,7 +61,8 @@ class Tab extends React.Component {
       clientId: config.clientId,
     });
 
-    // Only these two permission can be used without admin approval in microsoft tenant
+    // Only these two permission can be used without admin approval in microsoft
+    // tenant
     this.scope = ["User.Read", "User.ReadBasic.All"];
   }
 
@@ -97,7 +98,7 @@ class Tab extends React.Component {
       showLoginPage: consentNeeded,
     });
     Providers.globalProvider.setState(
-      consentNeeded ? ProviderState.SignedOut : ProviderState.SignedIn
+      consentNeeded ? ProviderState.SignedOut : ProviderState.SignedIn,
     );
     return consentNeeded;
   }
@@ -185,7 +186,6 @@ class Tab extends React.Component {
                   <PeoplePicker
                     userType="user"
                     selectionChanged={handleInputChange}
-                    placeholder="Typing name to select people to view contact info"
                   ></PeoplePicker>
                 </div>
 

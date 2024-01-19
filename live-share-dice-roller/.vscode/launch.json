@@ -10,7 +10,8 @@
                 "group": "remote",
                 "order": 1
             },
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "postDebugTask": "Terminate All Tasks"
         },
         {
             "name": "Launch Remote (Chrome)",
@@ -21,7 +22,8 @@
                 "group": "remote",
                 "order": 2
             },
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "postDebugTask": "Terminate All Tasks"
         },
         {
             "name": "Attach to Frontend (Edge)",
@@ -32,7 +34,8 @@
                 "group": "all",
                 "hidden": true
             },
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "postDebugTask": "Terminate All Tasks"
         },
         {
             "name": "Attach to Frontend (Chrome)",
@@ -43,12 +46,13 @@
                 "group": "all",
                 "hidden": true
             },
-            "internalConsoleOptions": "neverOpen"
+            "internalConsoleOptions": "neverOpen",
+            "postDebugTask": "Terminate All Tasks"
         }
     ],
     "compounds": [
         {
-            "name": "Debug (Edge)",
+            "name": "Debug in Teams (Edge)",
             "configurations": [
                 "Attach to Frontend (Edge)"
             ],
@@ -60,7 +64,7 @@
             "stopAll": true
         },
         {
-            "name": "Debug (Chrome)",
+            "name": "Debug in Teams (Chrome)",
             "configurations": [
                 "Attach to Frontend (Chrome)"
             ],
