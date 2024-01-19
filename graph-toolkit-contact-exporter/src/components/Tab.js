@@ -14,18 +14,18 @@ import {
   TableHeaderCell,
   TableRow,
 } from "@fluentui/react-components";
-import {CacheService} from "@microsoft/mgt";
-import {Providers, ProviderState} from "@microsoft/mgt-element";
+import { CacheService } from "@microsoft/mgt";
+import { Providers, ProviderState } from "@microsoft/mgt-element";
 import {
   PeoplePicker,
   Person,
   PersonCardInteraction,
   PersonViewType,
 } from "@microsoft/mgt-react";
-import {TeamsFxProvider} from "@microsoft/mgt-teamsfx-provider";
-import {TeamsUserCredential} from "@microsoft/teamsfx";
+import { TeamsFxProvider } from "@microsoft/mgt-teamsfx-provider";
+import { TeamsUserCredential } from "@microsoft/teamsfx";
 import React from "react";
-import {CSVLink} from "react-csv";
+import { CSVLink } from "react-csv";
 
 import config from "./lib/config";
 
@@ -36,11 +36,11 @@ class Tab extends React.Component {
     CacheService.clearCacheById(cacheId);
 
     this.state = {
-      showLoginPage : undefined,
-      selectedPeople : undefined,
-      tableHeader : [ "Name", "Email", "User Principal Name" ],
-      tableRows : [],
-      csvData : [],
+      showLoginPage: undefined,
+      selectedPeople: undefined,
+      tableHeader: ["Name", "Email", "User Principal Name"],
+      tableRows: [],
+      csvData: [],
     };
   }
 
@@ -57,13 +57,13 @@ class Tab extends React.Component {
 
   async initTeamsFx() {
     this.credential = new TeamsUserCredential({
-      initiateLoginEndpoint : config.initiateLoginEndpoint,
-      clientId : config.clientId,
+      initiateLoginEndpoint: config.initiateLoginEndpoint,
+      clientId: config.clientId,
     });
 
     // Only these two permission can be used without admin approval in microsoft
     // tenant
-    this.scope = [ "User.Read", "User.ReadBasic.All" ];
+    this.scope = ["User.Read", "User.ReadBasic.All"];
   }
 
   async loginBtnClick() {
@@ -71,16 +71,15 @@ class Tab extends React.Component {
       await this.credential.login(this.scope);
       Providers.globalProvider.setState(ProviderState.SignedIn);
       this.setState({
-        showLoginPage : false,
+        showLoginPage: false,
       });
     } catch (err) {
       if (err.message?.includes("CancelledByUser")) {
         const helpLink = "https://aka.ms/teamsfx-auth-code-flow";
         err.message +=
-            '\nIf you see "AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application" ' +
-            "in the popup window, you may be using unmatched version for TeamsFx SDK (version >= 0.5.0) and Teams Toolkit (version < 3.3.0) or " +
-            `cli (version < 0.11.0). Please refer to the help link for how to fix the issue: ${
-                helpLink}`;
+          '\nIf you see "AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application" ' +
+          "in the popup window, you may be using unmatched version for TeamsFx SDK (version >= 0.5.0) and Teams Toolkit (version < 3.3.0) or " +
+          `cli (version < 0.11.0). Please refer to the help link for how to fix the issue: ${helpLink}`;
       }
 
       alert("Login failed: " + err);
@@ -96,10 +95,11 @@ class Tab extends React.Component {
       consentNeeded = true;
     }
     this.setState({
-      showLoginPage : consentNeeded,
+      showLoginPage: consentNeeded,
     });
-    Providers.globalProvider.setState(consentNeeded ? ProviderState.SignedOut
-                                                    : ProviderState.SignedIn);
+    Providers.globalProvider.setState(
+      consentNeeded ? ProviderState.SignedOut : ProviderState.SignedIn,
+    );
     return consentNeeded;
   }
 
