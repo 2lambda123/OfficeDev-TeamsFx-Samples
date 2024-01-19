@@ -108,7 +108,7 @@ export default async function run(
     );
     res.body = { ...res.body, ...result };
   } catch (e) {
-    context.log.error(e);
+    Logger.error(e.message);
     return {
       status: 500,
       body: {
