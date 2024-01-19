@@ -17,6 +17,8 @@ import { Octokit } from "@octokit/core";
 
 import config from "../config";
 
+import config from "../config";
+
 interface Response {
   status: number;
   body: { [key: string]: any };
