@@ -79,6 +79,8 @@ export default async function run(
   let oboCredential: OnBehalfOfUserCredential;
   try {
     oboCredential = new OnBehalfOfUserCredential(accessToken, oboAuthConfig);
+  Logger.error(e.message);
+  logError(e.message);
   } catch (e) {
     context.log.error(e);
     return {
@@ -106,7 +108,7 @@ export default async function run(
     );
     res.body = { ...res.body, ...result };
   } catch (e) {
-    context.log.error(e);
+    Logger.error(e.message);
     return {
       status: 500,
       body: {
@@ -144,7 +146,9 @@ async function handleRequest(
       return { tasks: await getPlanner(oboCredential) };
     }
     // If serviceType is "planner" and method is "POST"
-    case "planner:POST": {
+    case "planner:POST":
+Logger.debug(JSON.stringify(reqData)); // Add this line to log the reqData object
+      {
       // Call createPlannerTask function to create a task
       await createPlannerTask(oboCredential, reqData);
       return { tasks: await getPlanner(oboCredential) };
